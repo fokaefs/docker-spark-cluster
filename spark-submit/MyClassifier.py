@@ -8,7 +8,7 @@ conf.set("spark.storage.memoryFraction", "0.5")
 sc = SparkContext(conf=conf)
 
 # Load and parse the data file into an RDD of LabeledPoint.
-data = MLUtils.loadLibSVMFile(sc, 'data/mllib/sample_libsvm_data.txt')
+data = MLUtils.loadLibSVMFile(sc, '/opt/spark-data/a1a')
 # Split the data into training and test sets (30% held out for testing)
 (trainingData, testData) = data.randomSplit([0.7, 0.3])
 
